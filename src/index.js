@@ -7,6 +7,17 @@ import {
 
 const mountedContainers = new Set()
 
+function cleanup() {
+  mountedContainers.forEach(cleanupContainer);
+}
+
+function cleanupContainer(container) {
+  if (container.parentNode === document.body) {
+    document.body.removeChild(container)
+  }
+  mountedContainers.delete(container);
+}
+
 function render(ui,
   {
     container,
@@ -32,7 +43,6 @@ function render(ui,
   return {
     container,
     baseElement,
-    // TODO: implement cleanup
     debug: (el = baseElement, maxLength, options) =>
       Array.isArray(el)
         ? // eslint-disable-next-line no-console
@@ -45,4 +55,4 @@ function render(ui,
 
 // just re-export everything from dom-testing-library
 export * from '@testing-library/dom'
-export { render  }
+export { render , cleanup }
