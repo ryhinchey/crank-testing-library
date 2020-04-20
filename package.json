@@ -4,7 +4,8 @@
   "description": "Simple Crank.js testing utilities that encourage good testing practices",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rimraf dist && babel src --out-dir dist"
+    "build": "rimraf dist && babel src --out-dir dist",
+    "test": "jest"
   },
   "license": "MIT",
   "files": [
@@ -18,7 +19,10 @@
     "@babel/cli": "^7.8.4",
     "@babel/preset-env": "^7.9.5",
     "babel-jest": "^25.4.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "@babel/plugin-transform-react-jsx": "^7.9.4",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "jest": "^25.4.0"
   },
   "peerDependencies": {
     "@bikeshaving/crank": "0.x"
