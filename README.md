@@ -40,5 +40,4 @@ test('renders name', () => {
   
   expect(getByText("Hello World")).toBeTruthy();
 });
-});
 ```
