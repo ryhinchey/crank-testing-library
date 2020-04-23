@@ -18,7 +18,7 @@ function cleanupContainer(container) {
   mountedContainers.delete(container);
 }
 
-function render(ui,
+async function render(ui,
   {
     container,
     baseElement = document.body,
@@ -38,7 +38,7 @@ function render(ui,
   // they're passing us a custom container or not.
   mountedContainers.add(container)
   
-  renderer.render(ui, container)
+  await renderer.render(ui, container)
 
   return {
     container,
