@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/ryhinchey/crank-testing-library.svg?branch=master)](https://travis-ci.org/ryhinchey/crank-testing-library)
 
-Simple Crank.js testing utilities that encourage good testing practices. Crank Testing Library is a lightweight adapter built on top of [DOM Testing Library](https://github.com/testing-library/dom-testing-library/).
+Simple [Crank.js](https://crank.js.org/) testing utilities that encourage good testing practices. Crank Testing Library is a lightweight adapter built on top of [DOM Testing Library](https://github.com/testing-library/dom-testing-library/).
 
 ## Installation
 
